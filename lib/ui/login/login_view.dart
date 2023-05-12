@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shamo_provider/common/style.dart';
+import 'package:shamo_provider/widgets/buttons/button_primary.dart';
 import 'package:shamo_provider/widgets/buttons/button_rich_text.dart';
 import 'package:shamo_provider/widgets/inputs/input_email.dart';
 import 'package:shamo_provider/widgets/inputs/input_password.dart';
@@ -50,6 +51,12 @@ class LoginView extends StatelessWidget {
                 label: 'Password',
                 hint: 'Your Password',
                 value: (value) {},
+              ),
+              ButtonPrimary(
+                isOutline: true,
+                label: 'Sign In',
+                margin: const EdgeInsets.only(top: 10),
+                onTap: () {},
               ),
               SizedBox(height: MediaQuery.of(context).viewInsets.bottom / 6)
             ],

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shamo_provider/ui/login/login_view.dart';
-import 'package:shamo_provider/utils/app_utils.dart';
 
 class SplashScreenView extends StatefulWidget {
   const SplashScreenView({Key? key}) : super(key: key);
@@ -14,7 +13,6 @@ class SplashScreenView extends StatefulWidget {
 class _SplashScreenViewState extends State<SplashScreenView> {
   @override
   void initState() {
-    AppUtils.generateColorSwatch(const Color(0xFF6C5ECF));
     Future.delayed(const Duration(seconds: 1)).then(
       (value) => Navigator.pushReplacementNamed(context, LoginView.routeName),
     );

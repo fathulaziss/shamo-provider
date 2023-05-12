@@ -216,49 +216,48 @@ class _InputPrimaryState extends State<InputPrimary> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if (widget.label != null)
-          Text(widget.label!, style: appTextTheme.titleMedium),
+          Padding(
+            padding: EdgeInsets.only(
+              bottom: widget.inputStyle == InputStyle.line ? 0 : 8,
+            ),
+            child: Text(widget.label!, style: appTextTheme.titleMedium),
+          ),
         Container(
-          margin: widget.margin ??
-              EdgeInsets.symmetric(
-                vertical: widget.inputStyle == InputStyle.line ? 0 : 8,
-              ),
+          margin: widget.margin ?? const EdgeInsets.only(bottom: 20),
+          padding: widget.padding ?? EdgeInsets.zero,
           width: double.infinity,
           decoration: _decor(),
-          child: Padding(
-            padding: widget.padding ?? EdgeInsets.zero,
-            child: Center(
-              child: Focus(
-                onFocusChange: _onFocusChange,
-                child: TextField(
-                  autocorrect: false,
-                  minLines: widget.minLines,
-                  maxLines: widget.maxLines,
-                  onTap: widget.onTap,
-                  readOnly: widget.readOnly,
-                  enabled: widget.enable,
-                  controller: widget.controller,
-                  style: widget.textStyle ??
-                      appTextTheme.bodyMedium!
-                          .copyWith(color: widget.textColor),
-                  textAlign: widget.textAlign ?? TextAlign.left,
-                  textAlignVertical: TextAlignVertical.center,
-                  keyboardType: widget.keyboardType ?? TextInputType.text,
-                  textCapitalization: widget.textCapitalization,
-                  obscureText: widget.obsecureText,
-                  decoration: inputDecoration(
-                    prefixIcon: widget.prefixIcon,
-                    hintText: widget.hint,
-                    suffixIcon: widget.suffixIcon,
-                    hintStyle: widget.hintStyle,
-                    hintColor: widget.hintColor,
-                    padding: _contentPadding(),
-                  ),
-                  cursorColor: widget.cursorColor,
-                  onChanged: _onChanged,
-                  inputFormatters: formatter,
-                  textInputAction: widget.textInputAction,
-                  onSubmitted: widget.onSubmitted,
+          child: Center(
+            child: Focus(
+              onFocusChange: _onFocusChange,
+              child: TextField(
+                autocorrect: false,
+                minLines: widget.minLines,
+                maxLines: widget.maxLines,
+                onTap: widget.onTap,
+                readOnly: widget.readOnly,
+                enabled: widget.enable,
+                controller: widget.controller,
+                style: widget.textStyle ??
+                    appTextTheme.bodyMedium!.copyWith(color: widget.textColor),
+                textAlign: widget.textAlign ?? TextAlign.left,
+                textAlignVertical: TextAlignVertical.center,
+                keyboardType: widget.keyboardType ?? TextInputType.text,
+                textCapitalization: widget.textCapitalization,
+                obscureText: widget.obsecureText,
+                decoration: inputDecoration(
+                  prefixIcon: widget.prefixIcon,
+                  hintText: widget.hint,
+                  suffixIcon: widget.suffixIcon,
+                  hintStyle: widget.hintStyle,
+                  hintColor: widget.hintColor,
+                  padding: _contentPadding(),
                 ),
+                cursorColor: widget.cursorColor,
+                onChanged: _onChanged,
+                inputFormatters: formatter,
+                textInputAction: widget.textInputAction,
+                onSubmitted: widget.onSubmitted,
               ),
             ),
           ),
