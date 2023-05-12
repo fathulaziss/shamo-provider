@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shamo_provider/common/style.dart';
 import 'package:shamo_provider/widgets/buttons/button_primary.dart';
 import 'package:shamo_provider/widgets/buttons/button_rich_text.dart';
 import 'package:shamo_provider/widgets/inputs/input_email.dart';
 import 'package:shamo_provider/widgets/inputs/input_password.dart';
+import 'package:shamo_provider/widgets/pages/page_default.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -12,22 +12,9 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Login', style: appTextTheme.titleLarge),
-            const SizedBox(height: 2),
-            Text(
-              'Sign In to Countinue',
-              style: appTextTheme.bodyMedium!.copyWith(color: blackColor2),
-            ),
-          ],
-        ),
-        toolbarHeight: 70,
-      ),
-      persistentFooterAlignment: AlignmentDirectional.center,
+    return PageDefault(
+      appBarTitle: 'Login',
+      appBarSubtitle: 'Sign In to Countinue',
       persistentFooterButtons: [
         ButtonRichText(
           label1: "Don't have an account?",
