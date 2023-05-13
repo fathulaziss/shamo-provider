@@ -26,7 +26,7 @@ class _MainViewState extends State<MainView> {
     const ProfileView(),
   ];
 
-  void _onBottomNavTapped(int index) {
+  void _onBottomNavBarTapped(int index) {
     setState(() {
       _bottomNavIndex = index;
     });
@@ -49,9 +49,7 @@ class _MainViewState extends State<MainView> {
         notchMargin: 10,
         child: CustomBottomNavBar(
           selectedIndex: _bottomNavIndex,
-          onTap: (index) {
-            _onBottomNavTapped(index);
-          },
+          onTap: _onBottomNavBarTapped,
         ),
       ),
       body: _listNavBarMenu[_bottomNavIndex],
