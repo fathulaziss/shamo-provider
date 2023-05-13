@@ -42,6 +42,8 @@ class ButtonPrimary extends StatelessWidget {
   Widget build(BuildContext context) {
     return isLoading
         ? Container(
+            height: height + 6,
+            width: height + 6,
             decoration: isOutline
                 ? BoxDecoration(
                     color: Colors.transparent,

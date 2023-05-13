@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shamo_provider/ui/register/register_view.dart';
 import 'package:shamo_provider/widgets/buttons/button_primary.dart';
 import 'package:shamo_provider/widgets/buttons/button_rich_text.dart';
 import 'package:shamo_provider/widgets/inputs/input_email.dart';
@@ -15,11 +16,12 @@ class LoginView extends StatelessWidget {
     return PageDefault(
       appBarTitle: 'Login',
       appBarSubtitle: 'Sign In to Countinue',
+      toolbarHeight: 70,
       persistentFooterButtons: [
         ButtonRichText(
           label1: "Don't have an account?",
           label2: ' Sign Up',
-          onPressed: () {},
+          onPressed: () => Navigator.pushNamed(context, RegisterView.routeName),
         )
       ],
       body: Container(
@@ -40,7 +42,6 @@ class LoginView extends StatelessWidget {
                 value: (value) {},
               ),
               ButtonPrimary(
-                isOutline: true,
                 label: 'Sign In',
                 margin: const EdgeInsets.only(top: 10),
                 onTap: () {},
