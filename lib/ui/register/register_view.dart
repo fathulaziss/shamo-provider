@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shamo_provider/common/style.dart';
+import 'package:shamo_provider/utils/app_assets.dart';
 import 'package:shamo_provider/widgets/buttons/button_primary.dart';
 import 'package:shamo_provider/widgets/buttons/button_rich_text.dart';
 import 'package:shamo_provider/widgets/inputs/input_email.dart';
@@ -46,9 +47,8 @@ class RegisterView extends StatelessWidget {
                 label: 'Full Name',
                 hint: 'Your Full Name',
                 prefixIcon: Image.asset(
-                  'assets/icons/icon_profile.png',
+                  AppAssets.icon('icon_profile_enable.png'),
                   width: 16,
-                  color: primaryColor,
                 ),
                 validation: (value) => value.isNotEmpty,
                 onChanged: (value) {},
@@ -57,7 +57,7 @@ class RegisterView extends StatelessWidget {
                 label: 'Username',
                 hint: 'Your Username',
                 prefixIcon: Image.asset(
-                  'assets/icons/icon_username.png',
+                  AppAssets.icon('icon_username.png'),
                   width: 16,
                   color: primaryColor,
                 ),

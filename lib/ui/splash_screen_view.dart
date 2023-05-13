@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shamo_provider/ui/login/login_view.dart';
+import 'package:shamo_provider/utils/app_assets.dart';
 
 class SplashScreenView extends StatefulWidget {
   const SplashScreenView({Key? key}) : super(key: key);
@@ -23,8 +24,11 @@ class _SplashScreenViewState extends State<SplashScreenView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child:
-            Image.asset('assets/logos/logo_app.png', width: 150, height: 150),
+        child: Image.asset(
+          AppAssets.logo('logo_app.png'),
+          width: 150,
+          height: 150,
+        ),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shamo_provider/ui/main_view.dart';
 import 'package:shamo_provider/ui/register/register_view.dart';
 import 'package:shamo_provider/widgets/buttons/button_primary.dart';
 import 'package:shamo_provider/widgets/buttons/button_rich_text.dart';
@@ -44,7 +45,8 @@ class LoginView extends StatelessWidget {
               ButtonPrimary(
                 label: 'Sign In',
                 margin: const EdgeInsets.only(top: 10),
-                onTap: () {},
+                onTap: () =>
+                    Navigator.pushReplacementNamed(context, MainView.routeName),
               ),
               SizedBox(height: MediaQuery.of(context).viewInsets.bottom / 6)
             ],

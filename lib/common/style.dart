@@ -11,9 +11,10 @@ const Color backgroundColor = Color(0xFF1F1D2B);
 const Color whiteColor = Color(0xFFF1F0F2);
 const Color blueColor = Color(0xFF2C96F1);
 const Color blackColor1 = Color(0xFF2B2937);
+const Color blackColor2 = Color(0xFF504F5E);
+const Color blackColor3 = Color(0xFF252836);
 const Color redColor = Color(0xFFED6363);
 const Color disabledColor = Color(0xFF808191);
-const Color blackColor2 = Color(0xFF504F5E);
 
 const Map<int, Color> swatchColor = {
   50: Color(0xffaea6e5),
@@ -56,6 +57,12 @@ final TextTheme appTextTheme = TextTheme(
   bodySmall: GoogleFonts.poppins(
     color: whiteColor,
     fontSize: 12,
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.05,
+  ),
+  labelSmall: GoogleFonts.poppins(
+    color: whiteColor,
+    fontSize: 10,
     fontWeight: FontWeight.w400,
     letterSpacing: 0.05,
   ),
